@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
-    username = models.CharField(max_length=150, unique=False)  # 👈 override here
+    username = models.CharField(max_length=150, unique=False) 
     email = models.EmailField(unique=True)
 
     def __str__(self):
@@ -13,7 +13,7 @@ class CustomUser(AbstractUser):
 
 
 
-# Now import get_user_model AFTER defining CustomUser
+
 from django.conf import settings
 
 class Ad(models.Model):
